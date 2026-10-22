@@ -1,0 +1,12 @@
+kind: KubernetesImagePuller
+apiVersion: che.eclipse.org/v1alpha1
+metadata:
+  name: image-puller
+  namespace: redhat-ods-applications
+spec:
+  daemonsetName: k8s-image-puller
+  images: |
+    vllm=registry.redhat.io/rhaii/vllm-cuda-rhel9@sha256:c056e61672b6aea489ad5dde0bd2f8497230f5333e87f7cf6c494eba3bfdc808;
+    gemma4=registry.redhat.io/rhai/modelcar-redhatai-gemma-4-31b-it-nvfp4:3.0;
+  tolerations: '[{"key":"nvidia.com/gpu","operator":"Exists","value":""}]'
+  nodeSelector: '{"nvidia.com/gpu.present":"true"}'
