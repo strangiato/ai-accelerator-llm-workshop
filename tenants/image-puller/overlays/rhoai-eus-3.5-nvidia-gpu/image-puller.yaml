@@ -2,7 +2,7 @@ kind: KubernetesImagePuller
 apiVersion: che.eclipse.org/v1alpha1
 metadata:
   name: image-puller
-  namespace: redhat-ods-applications
+  namespace: image-puller
 spec:
   daemonsetName: k8s-image-puller
   images: |
