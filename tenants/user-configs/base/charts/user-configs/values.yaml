@@ -1,0 +1,4 @@
+# Number of workshop users to provision namespaces and RBAC for.
+# Creates namespaces user1-model-server … userN-model-server and
+# grants each corresponding user admin access to their namespace.
+numberOfUsers: 10

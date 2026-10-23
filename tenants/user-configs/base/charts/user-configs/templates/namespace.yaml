@@ -1,0 +1,14 @@
+{{- range $i := until (int .Values.numberOfUsers) }}
+{{- $userNum := add $i 1 }}
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: user{{ $userNum }}-model-server
+  labels:
+    app.kubernetes.io/name: user-configs
+    app.kubernetes.io/instance: user{{ $userNum }}
+    app.kubernetes.io/managed-by: {{ $.Release.Service }}
+    app.kubernetes.io/part-of: {{ $.Chart.Name }}
+    opendatahub.io/dashboard: 'true'
+{{- end }}

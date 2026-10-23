@@ -1,0 +1,17 @@
+{{- range $i := until (int .Values.numberOfUsers) }}
+{{- $userNum := add $i 1 }}
+{{- $userName := printf "user%d" $userNum }}
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: {{ $userName }}-cluster-viewer
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: {{ $userName }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-reader
+{{- end }}
