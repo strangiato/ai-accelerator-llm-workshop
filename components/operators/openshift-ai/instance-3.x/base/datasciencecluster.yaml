@@ -6,31 +6,48 @@ metadata:
   name: default-dsc
 spec:
   components:
+    aigateway:
+      managementState: Removed
+      modelsAsAService:
+        managementState: Removed
     aipipelines:
       managementState: Removed
     dashboard:
-      managementState: Managed
+      managementState: Removed
     feastoperator:
       managementState: Removed
     kserve:
       managementState: Removed
-      rawDeploymentServiceConfig: Headed
-      nim:
-        managementState: Removed
       modelsAsService:
         managementState: Removed
+      nim:
+        managementState: Removed
+      rawDeploymentServiceConfig: Headed
+      wva:
+        managementState: Removed
     kueue:
+      autoCreateQueues: false
+      defaultClusterQueueName: default
+      defaultLocalQueueName: default
       managementState: Removed
     llamastackoperator:
+      managementState: Removed
+    mlflowoperator:
       managementState: Removed
     modelregistry:
       managementState: Removed
       registriesNamespace: rhoai-model-registries
+    ogx:
+      managementState: Removed
     ray:
       managementState: Removed
     trainingoperator:
       managementState: Removed
     trustyai:
+      eval:
+        lmeval:
+          permitCodeExecution: deny
+          permitOnline: deny
       managementState: Removed
     workbenches:
       managementState: Removed
