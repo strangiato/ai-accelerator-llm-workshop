@@ -25,7 +25,7 @@ components:
   - ../../components/disable-ibm-runtimes
   - ../../components/gateway-inference
   # - ../../components/gateway-maas
-  - ../../components/hardware-profiles-nvidia-gpu
+  - ../../components/hardware-profiles-default-profile
   - ../../components/idle-notebook-culling
   # - ../../components/maas-postgres-cnpg
   - ../../components/rhoai-auth

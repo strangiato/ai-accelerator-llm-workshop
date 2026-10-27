@@ -7,3 +7,6 @@ commonAnnotations:
 resources:
   - ../../../instance-3.x/overlays/eus-3.5-cpu-only
   - ../../../operator/overlays/eus-3.5
+
+components:
+  - ../../../instance-3.x/components/hardware-profiles-default-profile
